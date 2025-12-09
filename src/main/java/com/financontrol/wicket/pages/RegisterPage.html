@@ -1,0 +1,36 @@
+<wicket:extend>
+    <div class="login-card">
+        <div class="card hoverable">
+            <div class="card-content">
+                <span class="card-title center-align indigo-text text-darken-3">Register</span>
+                <div wicket:id="feedback" class="feedbackPanel"></div>
+
+                <form wicket:id="registerForm">
+                    <div class="input-field mb-3">
+                        <i class="material-icons prefix">person</i>
+                        <input type="text" wicket:id="name" id="name" />
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="input-field mb-3">
+                        <i class="material-icons prefix">email</i>
+                        <input type="email" wicket:id="email" id="email" />
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-field mb-3">
+                        <i class="material-icons prefix">lock</i>
+                        <input type="password" wicket:id="password" id="password" />
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="center-align" style="margin-top: 20px;">
+                        <button type="submit" class="btn waves-effect waves-light green darken-1" style="width: 100%;">
+                            Sign Up <i class="material-icons right">person_add</i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-action center-align bg-light">
+                <a href="/login" class="indigo-text">Already have an account? Login</a>
+            </div>
+        </div>
+    </div>
+</wicket:extend>

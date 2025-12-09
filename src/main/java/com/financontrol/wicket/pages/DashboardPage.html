@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:extend>
+    <div class="row">
+        <div class="col s12">
+            <h4 class="indigo-text text-darken-3">Today's Expenses</h4>
+
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">
+                        Total: <span wicket:id="totalAmount" class="red-text">R$ 0,00</span>
+                    </span>
+
+                    <table class="highlight responsive-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Date</th>
+                                <th>Category</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr wicket:id="expenses">
+                                <td wicket:id="name">Lunch</td>
+                                <td wicket:id="date">15/05/2023</td>
+                                <td wicket:id="category">Food</td>
+                                <td wicket:id="amount" class="red-text">R$ 25,00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Fallback message if list is empty could be handled with <wicket:enclosure> or WebMarkupContainer visibility -->
+                </div>
+                <div class="card-action right-align">
+                    <a href="/expenses" class="btn indigo darken-3 waves-effect waves-light">New +</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</wicket:extend>
+
+</html>

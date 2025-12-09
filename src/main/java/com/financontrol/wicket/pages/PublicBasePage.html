@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+
+<head>
+    <meta charset="utf-8" />
+    <title>FinanControl</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+            background-color: #e3f2fd;
+            /* Light Blue 50 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 400px;
+            /* Default width, override in children if needed */
+        }
+
+        /* Feedback Styles to Highlight Messages - Shared across all auth pages */
+        ul.feedbackPanel {
+            padding: 0;
+            margin: 0 0 20px 0;
+            list-style: none;
+        }
+
+        .feedbackPanelINFO {
+            color: #155724;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 15px;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .feedbackPanelERROR {
+            color: #721c24;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 15px;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* Helpers */
+        .mb-3 {
+            margin-bottom: 2rem !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <wicket:child />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            M.AutoInit();
+        });
+    </script>
+
+</body>
+
+</html>

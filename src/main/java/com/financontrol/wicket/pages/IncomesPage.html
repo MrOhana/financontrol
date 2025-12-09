@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:extend>
+    <div class="row">
+        <!-- Form Section -->
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">Add Income</span>
+                    <form wicket:id="form">
+                        <div class="input-field mb-3">
+                            <input type="text" wicket:id="name" id="inc-name" />
+                            <label for="inc-name">Name</label>
+                        </div>
+                        <div class="input-field mb-3">
+                            <textarea wicket:id="description" id="inc-description"
+                                class="materialize-textarea"></textarea>
+                            <label for="inc-description">Description</label>
+                        </div>
+                        <div class="input-field mb-3">
+                            <input type="text" wicket:id="value" id="inc-value" />
+                            <label for="inc-value">Value</label>
+                        </div>
+                        <div class="input-field mb-3">
+                            <input type="date" wicket:id="date" id="inc-date" placeholder=" " />
+                            <label for="inc-date" class="active">Date</label>
+                        </div>
+                        <button type="submit" class="btn waves-effect waves-light indigo darken-3" style="width: 100%;">
+                            Save <i class="material-icons right">save</i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- List Section -->
+        <div class="col s12 m8">
+            <!-- Filter Section -->
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">Filter</span>
+                    <form wicket:id="filterForm">
+                        <div class="row" style="margin-bottom: 0;">
+                            <div class="input-field col s12 m5">
+                                <input type="date" wicket:id="startDate" id="filterStart" placeholder=" " />
+                                <label for="filterStart" class="active">Start Date</label>
+                            </div>
+                            <div class="input-field col s12 m5">
+                                <input type="date" wicket:id="endDate" id="filterEnd" placeholder=" " />
+                                <label for="filterEnd" class="active">End Date</label>
+                            </div>
+                            <div class="col s12 m2 center-align" style="margin-top: 1.5rem;">
+                                <button type="submit" class="btn waves-effect waves-light indigo darken-3">
+                                    <i class="material-icons">filter_list</i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">Recent Incomes</span>
+                    <table class="highlight responsive-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Value</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr wicket:id="incomes">
+                                <td wicket:id="name"></td>
+                                <td wicket:id="value"></td>
+                                <td wicket:id="date"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</wicket:extend>
+
+</html>

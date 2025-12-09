@@ -1,0 +1,36 @@
+<wicket:extend>
+    <div class="login-card">
+        <div class="card hoverable">
+            <div class="card-content">
+                <div class="center-align mb-3">
+                    <i class="material-icons indigo-text text-darken-3"
+                        style="font-size: 64px;">account_balance_wallet</i>
+                </div>
+                <span class="card-title center-align indigo-text text-darken-3">FinanControl</span>
+                <div wicket:id="feedback" class="feedbackPanel"></div>
+
+                <form wicket:id="loginForm">
+                    <div class="input-field mb-3">
+                        <i class="material-icons prefix">email</i>
+                        <input type="text" wicket:id="username" id="username" />
+                        <label for="username">Email</label>
+                    </div>
+                    <div class="input-field mb-3">
+                        <i class="material-icons prefix">lock</i>
+                        <input type="password" wicket:id="password" id="password" />
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="center-align" style="margin-top: 20px;">
+                        <button type="submit" class="btn waves-effect waves-light indigo darken-3" style="width: 100%;">
+                            Login <i class="material-icons right">login</i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-action center-align bg-light">
+                <a href="/register" class="indigo-text">Register</a>
+                <a href="/forgot-password" class="indigo-text">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+</wicket:extend>
