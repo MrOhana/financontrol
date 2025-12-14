@@ -42,6 +42,14 @@ public class User implements Serializable {
         ACTIVE, INACTIVE
     }
 
+    public enum Role {
+        USER, ADMIN
+    }
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private Role role = Role.USER;
+
     public User() {
     }
 
@@ -165,5 +173,13 @@ public class User implements Serializable {
 
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 }

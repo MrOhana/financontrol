@@ -38,6 +38,7 @@ public class UserService {
         // 1. Save user as INACTIVE
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setStatus(User.UserStatus.INACTIVE);
+        user.setRole(User.Role.USER);
         User savedUser = userRepository.save(user);
 
         // 2. Create Verification Token

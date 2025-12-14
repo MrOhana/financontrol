@@ -1,6 +1,8 @@
 package com.financontrol.security;
 
-import java.util.Collections;
+import java.util.List;
+
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -31,7 +33,8 @@ public class CustomUserDetailsService implements UserDetailsService {
                 true,
                 true,
                 true,
-                Collections.emptyList() // Authorities can be added if roles are implemented
-        );
+                // Map the Enum Role to a Spring Security Authority ("ROLE_ADMIN" or
+                // "ROLE_USER")
+                List.of(new SimpleGrantedAuthority("ROLE_" + user.getRole().name())));
     }
 }

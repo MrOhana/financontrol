@@ -29,6 +29,8 @@ public class SecurityConfig {
                                                                 new AntPathRequestMatcher("/js/**"),
                                                                 new AntPathRequestMatcher("/images/**"))
                                                 .permitAll()
+                                                .requestMatchers(new AntPathRequestMatcher("/actuator/**"))
+                                                .hasRole("ADMIN")
                                                 .anyRequest().authenticated())
                                 .formLogin(form -> form
                                                 .loginPage("/login")
